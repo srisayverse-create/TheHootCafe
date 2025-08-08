@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheHOOTCafe - Cannaught Palace Delhi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        .bounce-in {
+            animation: bounceIn 1.2s ease-out;
+        }
+        
+        .float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.05); }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(139, 69, 19, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(139, 69, 19, 0.6); }
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #D2691E;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        .video-placeholder {
+            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
+            border: 2px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .image-placeholder {
+            background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
+            border: 2px dashed #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white shadow-lg fixed w-full top-0 z-50 fade-in">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold bounce-in">
+                    🦉 TheHOOTCafe
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('home')">Home</a>
+                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('menu')">Menu</a>
+                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('story')">Our Story</a>
+                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('gallery')">Gallery</a>
+                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('contact')">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="toggleMobileMenu()" class="text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="md:hidden mt-4 hidden">
+                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('home')">Home</a>
+                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('menu')">Menu</a>
+                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('story')">Our Story</a>
+                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('gallery')">Gallery</a>
+                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('contact')">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white min-h-screen flex items-center pt-20">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="slide-up">
+                        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                            Welcome to<br>
+                            <span class="text-amber-200">TheHOOTCafe</span>
+                        </h1>
+                        <p class="text-xl mb-8 text-amber-100">
+                            Experience the perfect blend of aromatic coffee, delicious food, and cozy ambiance in the heart of Cannaught Palace, Delhi.
+                        </p>
+                        <div class="space-x-4">
+                            <button onclick="showPage('menu')" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition duration-300 pulse-glow">
+                                View Menu
+                            </button>
+                            <button onclick="showPage('contact')" class="border-2 border-white text-white hover:bg-white hover:text-amber-800 px-8 py-3 rounded-full font-semibold transition duration-300">
+                                Visit Us
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bounce-in">
+                        <div class="image-placeholder h-96 rounded-lg">
+                            📸 Hero Cafe Image
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-amber-800 mb-16 slide-up">Why Choose TheHOOTCafe?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center card-hover bg-amber-50 p-8 rounded-lg">
+                        <div class="text-6xl mb-4 float">☕</div>
+                        <h3 class="text-2xl font-semibold text-amber-800 mb-4">Premium Coffee</h3>
+                        <p class="text-gray-600">Freshly roasted beans from the finest coffee regions, brewed to perfection.</p>
+                    </div>
+                    <div class="text-center card-hover bg-amber-50 p-8 rounded-lg">
+                        <div class="text-6xl mb-4 float" style="animation-delay: 0.5s">🍰</div>
+                        <h3 class="text-2xl font-semibold text-amber-800 mb-4">Delicious Treats</h3>
+                        <p class="text-gray-600">Homemade pastries, cakes, and snacks that perfectly complement your coffee.</p>
+                    </div>
+                    <div class="text-center card-hover bg-amber-50 p-8 rounded-lg">
+                        <div class="text-6xl mb-4 float" style="animation-delay: 1s">🏛️</div>
+                        <h3 class="text-2xl font-semibold text-amber-800 mb-4">Prime Location</h3>
+                        <p class="text-gray-600">Located in the historic Cannaught Palace, Delhi - perfect for meetings and relaxation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Preview -->
+        <section class="py-20 gradient-bg">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-bold text-center text-white mb-16 slide-up">Cafe Atmosphere</h2>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Interior 1</div>
+                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Coffee Art</div>
+                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Pastries</div>
+                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Exterior</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menu" class="page pt-24">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-bold text-center text-amber-800 mb-16 bounce-in">Our Menu</h1>
+                
+                <!-- Coffee Section -->
+                <div class="mb-16 slide-up">
+                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 flex items-center">
+                        ☕ Coffee & Beverages
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Signature HOOT Blend</h3>
+                                    <p class="text-gray-600">Our special house blend with notes of chocolate and caramel</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹180</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Coffee Image</div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Cappuccino Deluxe</h3>
+                                    <p class="text-gray-600">Rich espresso with steamed milk and artistic foam</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹160</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Cappuccino Image</div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Iced Caramel Macchiato</h3>
+                                    <p class="text-gray-600">Perfect blend of espresso, milk, and caramel syrup</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹200</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Iced Coffee Image</div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Masala Chai Latte</h3>
+                                    <p class="text-gray-600">Traditional Indian spices with steamed milk</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹140</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Chai Image</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Section -->
+                <div class="mb-16 slide-up">
+                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 flex items-center">
+                        🍽️ Food & Snacks
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Grilled Paneer Sandwich</h3>
+                                    <p class="text-gray-600">Fresh paneer with vegetables and mint chutney</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹220</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Sandwich Image</div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Chocolate Croissant</h3>
+                                    <p class="text-gray-600">Buttery pastry filled with rich dark chocolate</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹150</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Croissant Image</div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Avocado Toast</h3>
+                                    <p class="text-gray-600">Multigrain bread topped with fresh avocado and herbs</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹280</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Toast Image</div>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h3 class="text-xl font-semibold text-amber-800">Blueberry Muffin</h3>
+                                    <p class="text-gray-600">Freshly baked with juicy blueberries</p>
+                                </div>
+                                <span class="text-amber-700 font-bold">₹120</span>
+                            </div>
+                            <div class="image-placeholder h-32 rounded">📸 Muffin Image</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts Section -->
+                <div class="slide-up">
+                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 flex items-center">
+                        🍰 Desserts & Pastries
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover text-center">
+                            <div class="image-placeholder h-40 rounded mb-4">📸 Cheesecake</div>
+                            <h3 class="text-lg font-semibold text-amber-800">New York Cheesecake</h3>
+                            <p class="text-amber-700 font-bold mt-2">₹250</p>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover text-center">
+                            <div class="image-placeholder h-40 rounded mb-4">📸 Tiramisu</div>
+                            <h3 class="text-lg font-semibold text-amber-800">Classic Tiramisu</h3>
+                            <p class="text-amber-700 font-bold mt-2">₹280</p>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg card-hover text-center">
+                            <div class="image-placeholder h-40 rounded mb-4">📸 Brownie</div>
+                            <h3 class="text-lg font-semibold text-amber-800">Fudge Brownie</h3>
+                            <p class="text-amber-700 font-bold mt-2">₹180</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Our Story Page -->
+    <div id="story" class="page pt-24">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-bold text-center text-amber-800 mb-16 bounce-in">Our Story</h1>
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="slide-up">
+                        <h2 class="text-3xl font-semibold text-amber-700 mb-6">The Beginning</h2>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            TheHOOTCafe was born from a simple dream - to create a space where coffee lovers could gather, connect, and experience the finest brews in the heart of Delhi. Located in the prestigious Cannaught Palace, our cafe has become a beloved destination for locals and visitors alike.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Our name "HOOT" represents the wisdom of the owl - just like how owls are known for their keen senses, we believe in serving coffee that awakens all your senses with its rich aroma, perfect taste, and memorable experience.
+                        </p>
+                    </div>
+                    <div class="bounce-in">
+                        <div class="image-placeholder h-80 rounded-lg">📸 Founders Story Image</div>
+                    </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="mb-16 slide-up">
+                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 text-center">Behind the Scenes</h2>
+                    <div class="video-placeholder h-96 rounded-lg">
+                        🎥 Video: The Making of TheHOOTCafe
+                        <br>
+                        <span class="text-sm">(Coffee brewing process, team interviews, cafe atmosphere)</span>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div class="bounce-in">
+                        <div class="image-placeholder h-80 rounded-lg">📸 Coffee Sourcing Image</div>
+                    </div>
+                    <div class="slide-up">
+                        <h2 class="text-3xl font-semibold text-amber-700 mb-6">Our Coffee Journey</h2>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            We source our coffee beans directly from sustainable farms across India and select international regions. Each bean is carefully selected, roasted to perfection, and crafted into the perfect cup that tells a story of its origin.
+                        </p>
+                        <p class="text-gray-700 text-lg leading-relaxed">
+                            Our master baristas undergo extensive training to ensure every cup meets our high standards. From the first sip to the last, we guarantee an experience that will keep you coming back for more.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mission & Values -->
+                <div class="bg-amber-50 p-12 rounded-lg slide-up">
+                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 text-center">Our Mission & Values</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">🌱</div>
+                            <h3 class="text-xl font-semibold text-amber-800 mb-3">Sustainability</h3>
+                            <p class="text-gray-700">We're committed to ethical sourcing and environmental responsibility in everything we do.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">👥</div>
+                            <h3 class="text-xl font-semibold text-amber-800 mb-3">Community</h3>
+                            <p class="text-gray-700">Building connections and fostering relationships through the shared love of great coffee.</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl mb-4">⭐</div>
+                            <h3 class="text-xl font-semibold text-amber-800 mb-3">Excellence</h3>
+                            <p class="text-gray-700">Never compromising on quality, from bean selection to the final cup served.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page pt-24">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-bold text-center text-amber-800 mb-16 bounce-in">Gallery</h1>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-12">
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Cafe Interior - Main Seating</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Coffee Bar & Barista</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Cozy Corner Seating</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Latte Art Creation</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Fresh Pastries Display</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Outdoor Seating Area</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Coffee Beans & Equipment</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Evening Ambiance</div>
+                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Special Events Setup</div>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-3xl font-semibold text-amber-700 mb-6">Visit Us & Create Memories</h2>
+                    <p class="text-gray-700 text-lg mb-8">Every corner of TheHOOTCafe is designed to provide you with comfort, warmth, and the perfect backdrop for your coffee moments.</p>
+                    <button onclick="showPage('contact')" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300">
+                        Plan Your Visit
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page pt-24">
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h1 class="text-5xl font-bold text-center text-amber-800 mb-16 bounce-in">Visit Us</h1>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="slide-up">
+                        <h2 class="text-3xl font-semibold text-amber-700 mb-8">Get In Touch</h2>
+                        
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-2xl">📍</div>
+                                <div>
+                                    <h3 class="font-semibold text-amber-800">Address</h3>
+                                    <p class="text-gray-700">TheHOOTCafe<br>Cannaught Palace<br>New Delhi, India</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-2xl">📞</div>
+                                <div>
+                                    <h3 class="font-semibold text-amber-800">Phone</h3>
+                                    <p class="text-gray-700">+91 98765 43210</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-2xl">✉️</div>
+                                <div>
+                                    <h3 class="font-semibold text-amber-800">Email</h3>
+                                    <p class="text-gray-700">hello@thehootcafe.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-2xl">🕒</div>
+                                <div>
+                                    <h3 class="font-semibold text-amber-800">Hours</h3>
+                                    <p class="text-gray-700">
+                                        Monday - Sunday<br>
+                                        8:00 AM - 10:00 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-amber-50 p-6 rounded-lg">
+                            <h3 class="text-xl font-semibold text-amber-800 mb-4">Connect With Us</h3>
+                            <div class="flex space-x-4">
+                                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Facebook</button>
+                                <button class="bg-pink-600 text-white px-4 py-2 rounded hover:bg-pink-700 transition duration-300">Instagram</button>
+                                <button class="bg-blue-400 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-300">Twitter</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bounce-in">
+                        <div class="bg-amber-50 p-8 rounded-lg">
+                            <h3 class="text-2xl font-semibold text-amber-800 mb-6">Send us a Message</h3>
+                            <form class="space-y-4">
+                                <div>
+                                    <label class="block text-amber-700 font-medium mb-2">Name</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:border-amber-500" placeholder="Your Name">
+                                </div>
+                                <div>
+                                    <label class="block text-amber-700 font-medium mb-2">Email</label>
+                                    <input type="email" class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:border-amber-500" placeholder="your@email.com">
+                                </div>
+                                <div>
+                                    <label class="block text-amber-700 font-medium mb-2">Message</label>
+                                    <textarea rows="4" class="w-full px-4 py-2 border border-amber-200 rounded-lg focus:outline-none focus:border-amber-500" placeholder="Tell us about your experience or ask us anything!"></textarea>
+                                </div>
+                                <button type="button" onclick="showDemo()" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-semibold transition duration-300">
+                                    Send Message
+                                </button>
+                            </form>
+                            <p class="text-sm text-gray-600 mt-4 text-center">
+                                <strong>Demo:</strong> This is a sample contact form for demonstration purposes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">🦉 TheHOOTCafe</h3>
+                    <p class="text-amber-100">Your perfect coffee destination in the heart of Delhi.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-amber-100">
+                        <li><a href="#" onclick="showPage('home')" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#" onclick="showPage('menu')" class="hover:text-white transition duration-300">Menu</a></li>
+                        <li><a href="#" onclick="showPage('story')" class="hover:text-white transition duration-300">Our Story</a></li>
+                        <li><a href="#" onclick="showPage('gallery')" class="hover:text-white transition duration-300">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-amber-100">
+                        <li>📍 Cannaught Palace, Delhi</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉️ hello@thehootcafe.com</li>
+                        <li>🕒 8 AM - 10 PM Daily</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <button class="bg-amber-600 hover:bg-amber-700 p-2 rounded transition duration-300">📘</button>
+                        <button class="bg-amber-600 hover:bg-amber-700 p-2 rounded transition duration-300">📷</button>
+                        <button class="bg-amber-600 hover:bg-amber-700 p-2 rounded transition duration-300">🐦</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-600 mt-8 pt-8 text-center text-amber-100">
+                <p>&copy; 2024 TheHOOTCafe. All rights reserved. Made with ❤️ in Delhi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Close mobile menu if open
+            document.getElementById('mobileMenu').classList.add('hidden');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+            
+            // Add animation to new page
+            setTimeout(() => {
+                const activePage = document.getElementById(pageId);
+                activePage.style.animation = 'fadeIn 0.5s ease-in-out';
+            }, 100);
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+        
+        function showDemo() {
+            alert('Thank you for your message! This is a demo form. In a real implementation, this would send your message to the cafe.');
+        }
+        
+        // Add scroll animations
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.slide-up, .bounce-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.animation = element.classList.contains('slide-up') ? 
+                        'slideUp 0.8s ease-out' : 'bounceIn 1.2s ease-out';
+                }
+            });
+        });
+        
+        // Add hover effects to cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card-hover');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c1a09ff18287fe',t:'MTc1NDY4MzUxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
