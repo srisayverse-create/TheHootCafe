@@ -55,12 +55,12 @@
         }
         
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(139, 69, 19, 0.3); }
-            50% { box-shadow: 0 0 30px rgba(139, 69, 19, 0.6); }
+            0%, 100% { box-shadow: 0 0 20px rgba(111, 78, 55, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(111, 78, 55, 0.6); }
         }
         
         .gradient-bg {
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #F4A460 100%);
+            background: linear-gradient(135deg, #3C2415 0%, #6F4E37 50%, #8B4513 100%);
         }
         
         .card-hover {
@@ -84,7 +84,7 @@
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: #D2691E;
+            background-color: #D2B48C;
             transition: width 0.3s ease;
         }
         
@@ -100,29 +100,10 @@
             display: block;
         }
         
-        .video-placeholder {
-            background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 1.2rem;
-            font-weight: 500;
-        }
-        
-        .image-placeholder {
-            background: linear-gradient(45deg, #f8f8f8, #e8e8e8);
-            border: 2px dashed #ddd;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #888;
-            font-weight: 500;
-        }
+
     </style>
 </head>
-<body class="bg-amber-50">
+<body class="bg-yellow-50" style="background-color: #F5F5DC;">
     <!-- Navigation -->
     <nav class="gradient-bg text-white shadow-lg fixed w-full top-0 z-50 fade-in">
         <div class="container mx-auto px-6 py-4">
@@ -131,11 +112,11 @@
                     🦉 TheHOOTCafe
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('home')">Home</a>
-                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('menu')">Menu</a>
-                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('story')">Our Story</a>
-                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('gallery')">Gallery</a>
-                    <a href="#" class="nav-link hover:text-amber-200" onclick="showPage('contact')">Contact</a>
+                    <a href="#" class="nav-link hover:text-yellow-200" onclick="showPage('home')">Home</a>
+                    <a href="#" class="nav-link hover:text-yellow-200" onclick="showPage('menu')">Menu</a>
+                    <a href="#" class="nav-link hover:text-yellow-200" onclick="showPage('story')">Our Story</a>
+                    <a href="#" class="nav-link hover:text-yellow-200" onclick="showPage('gallery')">Gallery</a>
+                    <a href="#" class="nav-link hover:text-yellow-200" onclick="showPage('contact')">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button onclick="toggleMobileMenu()" class="text-white">
@@ -146,11 +127,11 @@
                 </div>
             </div>
             <div id="mobileMenu" class="md:hidden mt-4 hidden">
-                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('home')">Home</a>
-                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('menu')">Menu</a>
-                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('story')">Our Story</a>
-                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('gallery')">Gallery</a>
-                <a href="#" class="block py-2 hover:text-amber-200" onclick="showPage('contact')">Contact</a>
+                <a href="#" class="block py-2 hover:text-yellow-200" onclick="showPage('home')">Home</a>
+                <a href="#" class="block py-2 hover:text-yellow-200" onclick="showPage('menu')">Menu</a>
+                <a href="#" class="block py-2 hover:text-yellow-200" onclick="showPage('story')">Our Story</a>
+                <a href="#" class="block py-2 hover:text-yellow-200" onclick="showPage('gallery')">Gallery</a>
+                <a href="#" class="block py-2 hover:text-yellow-200" onclick="showPage('contact')">Contact</a>
             </div>
         </div>
     </nav>
@@ -164,24 +145,22 @@
                     <div class="slide-up">
                         <h1 class="text-5xl md:text-6xl font-bold mb-6">
                             Welcome to<br>
-                            <span class="text-amber-200">TheHOOTCafe</span>
+                            <span class="text-yellow-200">TheHOOTCafe</span>
                         </h1>
-                        <p class="text-xl mb-8 text-amber-100">
+                        <p class="text-xl mb-8 text-yellow-100">
                             Experience the perfect blend of aromatic coffee, delicious food, and cozy ambiance in the heart of Cannaught Palace, Delhi.
                         </p>
                         <div class="space-x-4">
-                            <button onclick="showPage('menu')" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition duration-300 pulse-glow">
+                            <button onclick="showPage('menu')" class="text-white px-8 py-3 rounded-full font-semibold transition duration-300 pulse-glow" style="background-color: #8B4513; hover:background-color: #6F4E37;">
                                 View Menu
                             </button>
-                            <button onclick="showPage('contact')" class="border-2 border-white text-white hover:bg-white hover:text-amber-800 px-8 py-3 rounded-full font-semibold transition duration-300">
+                            <button onclick="showPage('contact')" class="border-2 border-white text-white hover:bg-white px-8 py-3 rounded-full font-semibold transition duration-300" style="hover:color: #3C2415;">
                                 Visit Us
                             </button>
                         </div>
                     </div>
                     <div class="bounce-in">
-                        <div class="image-placeholder h-96 rounded-lg">
-                            📸 Hero Cafe Image
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="TheHOOTCafe Interior" class="h-96 w-full object-cover rounded-lg shadow-lg">
                     </div>
                 </div>
             </div>
@@ -190,21 +169,21 @@
         <!-- Features Section -->
         <section class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold text-center text-amber-800 mb-16 slide-up">Why Choose TheHOOTCafe?</h2>
+                <h2 class="text-4xl font-bold text-center mb-16 slide-up" style="color: #3C2415;">Why Choose TheHOOTCafe?</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="text-center card-hover bg-amber-50 p-8 rounded-lg">
+                    <div class="text-center card-hover p-8 rounded-lg" style="background-color: #F5E6D3;">
                         <div class="text-6xl mb-4 float">☕</div>
-                        <h3 class="text-2xl font-semibold text-amber-800 mb-4">Premium Coffee</h3>
+                        <h3 class="text-2xl font-semibold mb-4" style="color: #3C2415;">Premium Coffee</h3>
                         <p class="text-gray-600">Freshly roasted beans from the finest coffee regions, brewed to perfection.</p>
                     </div>
-                    <div class="text-center card-hover bg-amber-50 p-8 rounded-lg">
+                    <div class="text-center card-hover p-8 rounded-lg" style="background-color: #F5E6D3;">
                         <div class="text-6xl mb-4 float" style="animation-delay: 0.5s">🍰</div>
-                        <h3 class="text-2xl font-semibold text-amber-800 mb-4">Delicious Treats</h3>
+                        <h3 class="text-2xl font-semibold mb-4" style="color: #3C2415;">Delicious Treats</h3>
                         <p class="text-gray-600">Homemade pastries, cakes, and snacks that perfectly complement your coffee.</p>
                     </div>
-                    <div class="text-center card-hover bg-amber-50 p-8 rounded-lg">
+                    <div class="text-center card-hover p-8 rounded-lg" style="background-color: #F5E6D3;">
                         <div class="text-6xl mb-4 float" style="animation-delay: 1s">🏛️</div>
-                        <h3 class="text-2xl font-semibold text-amber-800 mb-4">Prime Location</h3>
+                        <h3 class="text-2xl font-semibold mb-4" style="color: #3C2415;">Prime Location</h3>
                         <p class="text-gray-600">Located in the historic Cannaught Palace, Delhi - perfect for meetings and relaxation.</p>
                     </div>
                 </div>
@@ -216,10 +195,10 @@
             <div class="container mx-auto px-6">
                 <h2 class="text-4xl font-bold text-center text-white mb-16 slide-up">Cafe Atmosphere</h2>
                 <div class="grid md:grid-cols-4 gap-6">
-                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Interior 1</div>
-                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Coffee Art</div>
-                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Pastries</div>
-                    <div class="image-placeholder h-48 rounded-lg card-hover">📸 Exterior</div>
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cafe Interior" class="h-48 w-full object-cover rounded-lg card-hover shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coffee Latte Art" class="h-48 w-full object-cover rounded-lg card-hover shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fresh Pastries" class="h-48 w-full object-cover rounded-lg card-hover shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cafe Exterior" class="h-48 w-full object-cover rounded-lg card-hover shadow-lg">
                 </div>
             </div>
         </section>
@@ -229,102 +208,102 @@
     <div id="menu" class="page pt-24">
         <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
-                <h1 class="text-5xl font-bold text-center text-amber-800 mb-16 bounce-in">Our Menu</h1>
+                <h1 class="text-5xl font-bold text-center mb-16 bounce-in" style="color: #3C2415;">Our Menu</h1>
                 
                 <!-- Coffee Section -->
                 <div class="mb-16 slide-up">
-                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 flex items-center">
+                    <h2 class="text-3xl font-semibold mb-8 flex items-center" style="color: #6F4E37;">
                         ☕ Coffee & Beverages
                     </h2>
                     <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Signature HOOT Blend</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Signature HOOT Blend</h3>
                                     <p class="text-gray-600">Our special house blend with notes of chocolate and caramel</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹180</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹180</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Coffee Image</div>
+                            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HOOT Blend Coffee" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Cappuccino Deluxe</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Cappuccino Deluxe</h3>
                                     <p class="text-gray-600">Rich espresso with steamed milk and artistic foam</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹160</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹160</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Cappuccino Image</div>
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cappuccino Deluxe" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Iced Caramel Macchiato</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Iced Caramel Macchiato</h3>
                                     <p class="text-gray-600">Perfect blend of espresso, milk, and caramel syrup</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹200</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹200</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Iced Coffee Image</div>
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Iced Caramel Macchiato" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Masala Chai Latte</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Masala Chai Latte</h3>
                                     <p class="text-gray-600">Traditional Indian spices with steamed milk</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹140</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹140</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Chai Image</div>
+                            <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Masala Chai Latte" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
                     </div>
                 </div>
 
                 <!-- Food Section -->
                 <div class="mb-16 slide-up">
-                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 flex items-center">
+                    <h2 class="text-3xl font-semibold mb-8 flex items-center" style="color: #6F4E37;">
                         🍽️ Food & Snacks
                     </h2>
                     <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Grilled Paneer Sandwich</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Grilled Paneer Sandwich</h3>
                                     <p class="text-gray-600">Fresh paneer with vegetables and mint chutney</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹220</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹220</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Sandwich Image</div>
+                            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Grilled Paneer Sandwich" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Chocolate Croissant</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Chocolate Croissant</h3>
                                     <p class="text-gray-600">Buttery pastry filled with rich dark chocolate</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹150</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹150</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Croissant Image</div>
+                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chocolate Croissant" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Avocado Toast</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Avocado Toast</h3>
                                     <p class="text-gray-600">Multigrain bread topped with fresh avocado and herbs</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹280</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹280</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Toast Image</div>
+                            <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Avocado Toast" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
-                        <div class="bg-amber-50 p-6 rounded-lg card-hover">
+                        <div class="p-6 rounded-lg card-hover" style="background-color: #F5E6D3;">
                             <div class="flex justify-between items-start mb-4">
                                 <div>
-                                    <h3 class="text-xl font-semibold text-amber-800">Blueberry Muffin</h3>
+                                    <h3 class="text-xl font-semibold" style="color: #3C2415;">Blueberry Muffin</h3>
                                     <p class="text-gray-600">Freshly baked with juicy blueberries</p>
                                 </div>
-                                <span class="text-amber-700 font-bold">₹120</span>
+                                <span class="font-bold" style="color: #6F4E37;">₹120</span>
                             </div>
-                            <div class="image-placeholder h-32 rounded">📸 Muffin Image</div>
+                            <img src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Blueberry Muffin" class="h-32 w-full object-cover rounded shadow-md">
                         </div>
                     </div>
                 </div>
@@ -336,17 +315,17 @@
                     </h2>
                     <div class="grid md:grid-cols-3 gap-6">
                         <div class="bg-amber-50 p-6 rounded-lg card-hover text-center">
-                            <div class="image-placeholder h-40 rounded mb-4">📸 Cheesecake</div>
+                            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="New York Cheesecake" class="h-40 w-full object-cover rounded mb-4 shadow-md">
                             <h3 class="text-lg font-semibold text-amber-800">New York Cheesecake</h3>
                             <p class="text-amber-700 font-bold mt-2">₹250</p>
                         </div>
                         <div class="bg-amber-50 p-6 rounded-lg card-hover text-center">
-                            <div class="image-placeholder h-40 rounded mb-4">📸 Tiramisu</div>
+                            <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Classic Tiramisu" class="h-40 w-full object-cover rounded mb-4 shadow-md">
                             <h3 class="text-lg font-semibold text-amber-800">Classic Tiramisu</h3>
                             <p class="text-amber-700 font-bold mt-2">₹280</p>
                         </div>
                         <div class="bg-amber-50 p-6 rounded-lg card-hover text-center">
-                            <div class="image-placeholder h-40 rounded mb-4">📸 Brownie</div>
+                            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fudge Brownie" class="h-40 w-full object-cover rounded mb-4 shadow-md">
                             <h3 class="text-lg font-semibold text-amber-800">Fudge Brownie</h3>
                             <p class="text-amber-700 font-bold mt-2">₹180</p>
                         </div>
@@ -373,23 +352,15 @@
                         </p>
                     </div>
                     <div class="bounce-in">
-                        <div class="image-placeholder h-80 rounded-lg">📸 Founders Story Image</div>
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Founders Story" class="h-80 w-full object-cover rounded-lg shadow-lg">
                     </div>
                 </div>
 
-                <!-- Video Section -->
-                <div class="mb-16 slide-up">
-                    <h2 class="text-3xl font-semibold text-amber-700 mb-8 text-center">Behind the Scenes</h2>
-                    <div class="video-placeholder h-96 rounded-lg">
-                        🎥 Video: The Making of TheHOOTCafe
-                        <br>
-                        <span class="text-sm">(Coffee brewing process, team interviews, cafe atmosphere)</span>
-                    </div>
-                </div>
+
 
                 <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
                     <div class="bounce-in">
-                        <div class="image-placeholder h-80 rounded-lg">📸 Coffee Sourcing Image</div>
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coffee Bean Sourcing" class="h-80 w-full object-cover rounded-lg shadow-lg">
                     </div>
                     <div class="slide-up">
                         <h2 class="text-3xl font-semibold text-amber-700 mb-6">Our Coffee Journey</h2>
@@ -431,24 +402,57 @@
     <div id="gallery" class="page pt-24">
         <section class="py-16 bg-white">
             <div class="container mx-auto px-6">
-                <h1 class="text-5xl font-bold text-center text-amber-800 mb-16 bounce-in">Gallery</h1>
+                <h1 class="text-5xl font-bold text-center mb-16 bounce-in" style="color: #3C2415;">Gallery</h1>
                 
-                <div class="grid md:grid-cols-3 gap-6 mb-12">
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Cafe Interior - Main Seating</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Coffee Bar & Barista</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Cozy Corner Seating</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Latte Art Creation</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Fresh Pastries Display</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Outdoor Seating Area</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Coffee Beans & Equipment</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Evening Ambiance</div>
-                    <div class="image-placeholder h-64 rounded-lg card-hover">📸 Special Events Setup</div>
+                <!-- Aesthetic Gallery Wall -->
+                <div class="mb-12">
+                    <!-- Row 1 -->
+                    <div class="flex gap-4 mb-4 h-80">
+                        <div class="flex-1">
+                            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cafe Interior - Main Seating" class="w-full h-full object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                        <div class="flex flex-col gap-4 flex-1">
+                            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coffee Bar & Barista" class="w-full h-36 object-cover rounded-lg card-hover shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cozy Corner Seating" class="w-full h-40 object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                        <div class="w-64">
+                            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Latte Art Creation" class="w-full h-full object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Row 2 -->
+                    <div class="flex gap-4 mb-4 h-64">
+                        <div class="w-72">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fresh Pastries Display" class="w-full h-full object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                        <div class="flex-1">
+                            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Outdoor Seating Area" class="w-full h-full object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                        <div class="flex flex-col gap-4 w-60">
+                            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Coffee Beans & Equipment" class="w-full h-28 object-cover rounded-lg card-hover shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Evening Ambiance" class="w-full h-32 object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Row 3 -->
+                    <div class="flex gap-4 h-72">
+                        <div class="flex flex-col gap-4 w-80">
+                            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Special Events Setup" class="w-full h-32 object-cover rounded-lg card-hover shadow-lg">
+                            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Iced Coffee Specialty" class="w-full h-36 object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                        <div class="flex-1">
+                            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cappuccino Art" class="w-full h-full object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                        <div class="w-64">
+                            <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chai Latte Special" class="w-full h-full object-cover rounded-lg card-hover shadow-lg">
+                        </div>
+                    </div>
                 </div>
 
                 <div class="text-center">
-                    <h2 class="text-3xl font-semibold text-amber-700 mb-6">Visit Us & Create Memories</h2>
+                    <h2 class="text-3xl font-semibold mb-6" style="color: #6F4E37;">Visit Us & Create Memories</h2>
                     <p class="text-gray-700 text-lg mb-8">Every corner of TheHOOTCafe is designed to provide you with comfort, warmth, and the perfect backdrop for your coffee moments.</p>
-                    <button onclick="showPage('contact')" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300">
+                    <button onclick="showPage('contact')" class="text-white px-8 py-3 rounded-full font-semibold transition duration-300" style="background-color: #8B4513; hover:background-color: #6F4E37;">
                         Plan Your Visit
                     </button>
                 </div>
@@ -647,5 +651,5 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c1a09ff18287fe',t:'MTc1NDY4MzUxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96c1d94302330942',t:'MTc1NDY4NTgzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
